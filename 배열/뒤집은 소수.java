@@ -10,7 +10,18 @@ class Main {
 		String[] inputs = new String[n];
 		for (int i = 0; i < n; i++) {
 			inputs[i] = kb.next();
-		} 
+		}
+		
+		// 숫자 뒤집는 방법 다른거...
+		/*
+		int tmp = 243;
+		int res = 0;
+		while(tmp>0){
+			int t=tmp%10;
+			res=res*10+t; -> 0*10+3, 3*10+4, 34*10+2
+			tmp=tmp/10;
+		}
+		*/
 
 		for (String s : inputs) {
 			StringBuilder sb = new StringBuilder(s);
