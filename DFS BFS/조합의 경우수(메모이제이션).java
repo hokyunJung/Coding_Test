@@ -2,7 +2,7 @@ import java.util.*;
 
 class Main {
 
-    static int[][] arr;
+    static int[][] arr; //이걸 까먹을뻔..
     static int n;
     static int r;
 
