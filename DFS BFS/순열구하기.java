@@ -16,7 +16,7 @@ class Main {
             return;
         } else {
             for (int i = 0; i < n; i++) {
-                if (ch[i] == 0) {
+                if (ch[i] == 0) {//i번째가 체크되어있으면 탐색 하지말라.
                     ch[i] = 1;
                     pm[L] = arr[i];
                     DFS(L+1);
@@ -35,7 +35,6 @@ L=1   pm[3,6]  pm[3,9]    pm[6,3]  pm[6,9]     pm[9,3]  pm[9,6]
      ch[1,1,0] ch[1,0,1] ch[1,1,0] ch[0,1,1]  ch[1,0,1] ch[0,1,1]
 
 L=2 print pm[3,6]
-
 
      */
 
