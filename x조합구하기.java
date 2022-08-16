@@ -22,6 +22,11 @@ class Main {
     }
 
     //D(L, start) start값을 주는걸 생각 못했고... start+1 이후부터 돌리는걸 생각 못했어ㅠㅠ
+    /*
+                  1
+    10        20     30    40
+  12 13 14   23 24   34
+    */
 
     public static void main(String[] args) {
         Main T = new Main();
