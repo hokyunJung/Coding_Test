@@ -13,15 +13,15 @@ class Main {
     static int n, m, answer=Integer.MAX_VALUE;
     static int pzCnt=0;
     static int[] pzCh;
-    static ArrayList<Point> pz = new ArrayList<>();
-    static ArrayList<Point> hz = new ArrayList<>();
+    static ArrayList<Point> pz = new ArrayList<>(); //피자집
+    static ArrayList<Point> hz = new ArrayList<>(); //집
 
     public void DFS(int L, int start) {
         if(L == m) {
             int sum = 0;
             for (Point h : hz) {
                 int dis = Integer.MAX_VALUE;
-                for (int p : pzCh) {
+                for (int p : pzCh) { // 0~5 개의 숫자 중 4개를 뽑은 것
                     dis=Math.min(dis, Math.abs(h.x-pz.get(p).x)+Math.abs(h.y-pz.get(p).y));
                 }
                 sum+=dis;
@@ -29,7 +29,7 @@ class Main {
             answer=Math.min(answer, sum);
             return;
         } else {
-            for(int i = start; i < pzCnt; i++) {
+            for(int i = start; i < pzCnt; i++) { //0~5개 숫자중 4개를 뽑는 로직
                 pzCh[L] = i;
                 DFS(L+1, i+1);
             }
